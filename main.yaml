@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  collections:
+    - community.kubernetes
+  tasks:
+  - name: Create a jenkins
+    k8s:
+      state: present
+      kubeconfig: ~/.kube/config
+      src: ./k8s/jenkins-deployment.yaml
