@@ -7,4 +7,9 @@
     k8s:
       state: present
       kubeconfig: ~/.kube/config
-      src: ./k8s/jenkins-deployment.yaml
+      src: ./k8s-deployment/jenkins-deployment.yaml
+  - name: deploy sonarqube
+    k8s:
+      state: present
+      kubeconfig: ~/.kube/config
+      src: ./k8s-deployment/sonarqube-deployments.yaml
