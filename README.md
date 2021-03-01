@@ -10,7 +10,10 @@ AWS Secret Access Key [None]: <YOUR_AWS_SECRET_ACCESS_KEY>
 - terraform apply
 
 ## Configure kubectl and AWS IAM Authenticator.
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [AWS IAM Authentication](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
 - Then
+- access your cluster 
 ```
 - aws eks --region {region-id} update-kubeconfig --name {Cluster Name}
 ```
@@ -18,7 +21,7 @@ AWS Secret Access Key [None]: <YOUR_AWS_SECRET_ACCESS_KEY>
 aws eks --region us-west-2 update-kubeconfig --name terraform-eks-demo
 ```
 
-## Run Ansible
+## Install and Run Ansible
 ```
 ansible-playbook main.yaml
 ```
